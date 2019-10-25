@@ -46,3 +46,17 @@ http://muug.ca/mirror/apache-dist/maven/maven-3/3.6.2/binaries/apache-maven-3.6.
 
 120  source ~/.bash_profile
   121  mvn -v
+  
+  
+  In case you run into the following error when build your first Jenkins job
+
+FATAL: Couldn't find any executable in /Users/xxxxx/Documents/apache-maven-3.3.9
+Build step 'Invoke top-level Maven targets' marked build as failure
+Finished: FAILURE
+it means jenkins  user doesn't have permissions to access your maven directory. (Jenkins by default will run all builds under a special user name called jenkins )
+
+
+
+Solution:
+
+To fix it, we need to ensure that jenkins user has read and executable permission on /**/**apache-maven-**  folder.
