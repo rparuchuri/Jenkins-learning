@@ -71,3 +71,37 @@ http://ant.apache.org/manual/targets.html
 
 Gradle:
 https://docs.gradle.org/current/dsl/index.html
+
+When faced with issue on 404 or filenot found exception
+
+I installed the tomcat 8.5.35 remotely on other machine. I did the following steps to solve this problem:
+
+1. Change $TOMCAT_HOME/conf/server.xml (Same as the course)
+
+  <role rolename="manager-script"/>
+
+  <role rolename="manager-gui"/>
+
+  <role rolename="admin-gui"/>
+
+  <user username="tomcat" password="tomcat" roles="manager-script,admin-gui,manager-gui"/>
+
+
+
+2. Because the default version come with Catalina directory, I put another file in the $TOMCAT_HOME/conf/Catalina/localhost folder, named manager.xml, in which the content is:
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context privileged="true" antiResourceLocking="false"   
+
+         docBase="${catalina.home}/webapps/manager"> 
+
+             <Valve className="org.apache.catalina.valves.RemoteAddrValve" allow="^.*$" /> 
+
+</Context>
+
+
+
+3. Save and restart and profit.
