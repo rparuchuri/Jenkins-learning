@@ -60,3 +60,14 @@ it means jenkins  user doesn't have permissions to access your maven directory. 
 Solution:
 
 To fix it, we need to ensure that jenkins user has read and executable permission on /**/**apache-maven-**  folder.
+
+
+Text Direction: Jenkins' Support for Gradle, Ant and Shell Scripts
+Apache Ant:
+http://ant.apache.org/
+
+Ant Targets:
+http://ant.apache.org/manual/targets.html
+
+Gradle:
+https://docs.gradle.org/current/dsl/index.html
