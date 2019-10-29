@@ -105,3 +105,15 @@ I installed the tomcat 8.5.35 remotely on other machine. I did the following ste
 
 
 3. Save and restart and profit.
+
+-----***---
+When configuring dual tomcat installs on the same hosts make sure you change the default shutdown ports along with the startup ports
+shut down ports are configured in <tomcat_home>/conf/server.xml
+
+e.g.
+
+/var/tmp/apache-tomcat-8.5.47-prod/conf
+
+cat server.xml | grep -i shut
+<Server port="8005" shutdown="SHUTDOWN">
+ 
