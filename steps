@@ -117,3 +117,5 @@ e.g.
 cat server.xml | grep -i shut
 <Server port="8005" shutdown="SHUTDOWN">
  
+ -------------------
+ https://www.level-up.one/6-of-my-favorite-jenkins-plugins/
