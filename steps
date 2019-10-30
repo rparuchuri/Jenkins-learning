@@ -59,7 +59,8 @@ create C:\Jenkins --- any working directory that you mention in slave config
 Launch method: launch agent by connecting to master
 
 
-
+configure remote ssh hosts in configuresystem
+plugins needed ssh sshagent
 
 
 
