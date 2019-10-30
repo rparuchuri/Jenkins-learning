@@ -47,11 +47,20 @@ Create /root/bin
 http://34.238.157.103:8080/jnlpJars/slave.jar
 
 install java
-
+for linux slave
 on jenkins/manage jenkins/manage nodes/newnode/ nodename- permanent node/
 executors- usually eqaul to number of cpu cores/ usage method-use as much as possible
 launch method - launch execution of command
 ssh root@<slave-id> java -jar slave.jar
+
+for windows slave open port 135 on security group
+install java
+create C:\Jenkins --- any working directory that you mention in slave config
+Launch method: launch agent by connecting to master
+
+
+
+
 
 
 ---------------------------------------------------------
