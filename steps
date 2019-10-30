@@ -30,6 +30,32 @@ https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+on+Red+Hat+distributi
 
 make sure you edit security groups for inbound traffic for instance on 8080
 
+-----------------------------------------
+
+Installing slaves:
+
+Install a EC2 Windows and Linux slave 
+
+For Linx slave enable passwordless authenticattion
+ssh-keygen
+copy keys to authorized keys to root
+
+copy the slave jar file from jenkins master:
+
+Create /root/bin
+-----*****
+http://34.238.157.103:8080/jnlpJars/slave.jar
+
+install java
+
+on jenkins/manage jenkins/manage nodes/newnode/ nodename- permanent node/
+executors- usually eqaul to number of cpu cores/ usage method-use as much as possible
+launch method - launch execution of command
+ssh root@<slave-id> java -jar slave.jar
+
+
+---------------------------------------------------------
+
 Install Git ona different EC2 instance:
 
 https://git-scm.com/download/linux
