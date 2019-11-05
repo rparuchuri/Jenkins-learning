@@ -53,6 +53,8 @@ executors- usually eqaul to number of cpu cores/ usage method-use as much as pos
 launch method - launch execution of command
 ssh root@<slave-id> java -jar slave.jar
 
+ssh root@34.203.219.190 java -jar /root/bin/slave.jar
+
 for windows slave open port 135 on security group
 install java
 create C:\Jenkins --- any working directory that you mention in slave config
